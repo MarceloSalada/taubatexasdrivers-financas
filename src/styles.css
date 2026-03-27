@@ -1,1 +1,120 @@
-
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --card-2:#111827;
+  --border:#1e293b;
+  --primary:#2563eb;
+  --primary-2:#1d4ed8;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --input-bg:#f8fafc;
+  --input-text:#020617;
+  --success:#dbeafe;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#020617 0%,#0f172a 100%);
+  color:var(--text);
+}
+button,input{font:inherit}
+.app-shell{min-height:100vh;padding:12px}
+.container{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.card{
+  background:rgba(15,23,42,.96);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.hero h1{margin:0;font-size:28px;color:#60a5fa}
+.hero p{margin:6px 0 0;color:var(--muted)}
+.kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kpi-card{display:flex;justify-content:space-between;align-items:flex-start}
+.kpi-card strong{display:block;font-size:22px;margin-top:6px}
+.muted{color:var(--muted);font-size:13px}
+.icon-wrap{
+  background:rgba(37,99,235,.15);
+  color:#60a5fa;
+  border-radius:16px;
+  padding:10px;
+}
+.tabs{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  background:rgba(15,23,42,.96);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:6px;
+}
+.tab-btn{
+  height:42px;border:none;border-radius:14px;background:transparent;color:#cbd5e1;font-weight:700;cursor:pointer
+}
+.tab-btn.active{background:#2563eb;color:#fff}
+.two-col,.dashboard-grid{display:grid;gap:14px}
+.form-grid{display:grid;gap:14px}
+.inline-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:block}
+.field span{display:block;margin-bottom:8px;font-weight:700;color:#f8fafc}
+input{
+  width:100%;
+  height:50px;
+  border-radius:18px;
+  border:1px solid #cbd5e1;
+  background:var(--input-bg);
+  color:var(--input-text);
+  padding:0 14px;
+  font-size:17px;
+  font-weight:700;
+}
+input::placeholder{color:#64748b}
+.primary-btn,.danger-btn,.outline-btn{
+  border:none;border-radius:18px;padding:14px 16px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px
+}
+.primary-btn{width:100%;background:var(--primary);color:#fff;margin-top:8px}
+.danger-btn{background:#7f1d1d;color:#fff}
+.outline-btn{background:#0b1220;color:#fff;border:1px solid #334155}
+.metric-row{
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+  background:#111827;border-radius:18px;padding:14px 16px;margin-bottom:10px
+}
+.metric-row span{color:#cbd5e1}
+.profit-box{
+  margin-top:12px;
+  background:rgba(37,99,235,.12);
+  border:1px solid rgba(96,165,250,.35);
+  border-radius:22px;
+  padding:18px;
+}
+.profit-box span{display:block;color:#cbd5e1;font-size:14px}
+.profit-box strong{display:block;margin-top:6px;font-size:28px;color:#60a5fa}
+.list{display:grid;gap:12px}
+.empty-box{background:#111827;border-radius:18px;padding:16px;color:var(--muted)}
+.entry-card{
+  display:flex;justify-content:space-between;gap:12px;align-items:flex-start;
+  background:#111827;border-radius:18px;padding:16px
+}
+.entry-date{font-weight:700;margin-bottom:6px}
+.entry-line{color:#94a3b8;font-size:14px;margin-top:4px}
+.entry-profit{color:#60a5fa;font-weight:700;margin-top:6px}
+.section-help{color:#94a3b8;font-size:14px;margin-top:-4px;margin-bottom:14px}
+.monthly-grid{display:grid;gap:12px}
+.cost-card{
+  border:1px solid #1f2937;
+  background:rgba(15,23,42,.65);
+  border-radius:18px;
+  padding:14px;
+}
+.cost-card label{display:block;color:#f8fafc;font-weight:700;margin-bottom:4px}
+.cost-card small{display:block;color:#94a3b8;margin-bottom:10px}
+.chart-card{min-height:360px}
+h2{margin:0 0 14px;color:#60a5fa;font-size:22px}
+@media(min-width:860px){
+  .kpi-grid{grid-template-columns:repeat(4,1fr)}
+  .two-col{grid-template-columns:1fr 1fr}
+  .monthly-grid{grid-template-columns:1fr 1fr}
+  .dashboard-grid{grid-template-columns:1fr 1fr}
+}
